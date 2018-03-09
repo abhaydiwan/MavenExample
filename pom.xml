@@ -6,7 +6,18 @@
     <version>3.7-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Simple Multi Modules Build</name>
-
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>DIWANABH-E756-releases</name>
+        <url>http://localhost:8081/artifactory/maven-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>DIWANABH-E756-snapshots</name>
+        <url>http://localhost:8081/artifactory/maven-local</url>
+    </snapshotRepository>
+</distributionManagement>
     <modules>
         <module>multi1</module>
         <module>multi2</module>
