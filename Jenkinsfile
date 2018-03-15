@@ -34,12 +34,12 @@ pipeline {
           image 'maven:3.5.0-jdk-8'
         }
       }
-      //steps {
+      steps {
         // using the Pipeline Maven plugin we can set maven configuration settings, publish test results, and annotate the Jenkins console
        // withMaven(options: [findBugsPublisher(), junitPublisher(ignoreAttachments: false)]) {
-        //  sh 'mvn clean findbugs:findbugs package'
+         sh 'mvn clean package'
         //}
-     // }
+     }
       //post {
        // success {
           // we only worry about archiving the jar file if the build steps are successful
@@ -65,12 +65,9 @@ pipeline {
               image 'maven:3.5.0-jdk-8'
             }
           }
-          environment {
-            //use 'sonar' credentials scoped only to this stage
-          //  SONAR = credentials('sonar')
-          }
+          
           steps {
-          //  sh 'mvn sonar:sonar -Dsonar.login=$SONAR_PSW'
+          / sh 'mvn clean'
           }
         }
       }
