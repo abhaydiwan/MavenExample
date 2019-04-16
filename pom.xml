@@ -7,11 +7,11 @@
     <packaging>pom</packaging>
     <name>Simple Multi Modules Build</name>
 <distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>DIWANABH-E756-releases</name>
-        <url>http://localhost:8081/artifactory/libs-release-local</url>
-    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>DIWANABH-E756-snapshots</name>
+        <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
 </distributionManagement>
     <modules>
         <module>multi1</module>
